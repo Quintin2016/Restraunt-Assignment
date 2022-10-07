@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mapping</title>
+		<!-- External Stylesheets -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<link rel="stylesheet" href="Quintin.css" />
+
+	</head>
+
+	<body>
+		<header>
+			<h1>KENYAN RESTAURANTS</h1>
+			<h2>Navigation and cuisines</h2>
+		</header>
+		<div id="map" style="width: 705px; height: 375px">
+			<!-- Add the Leaflet JavaScript library -->
+			<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+			<script>
+			var map = L.map('map').setView([0.776913, 37.919447], 6);
+
+			L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=48q75muHRgW2xeDZPOr5', {
+				attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+			}).addTo(map);
+var marker= new
+			L.marker([-0.516667,34.45]).addTo(map).bindPopup("<b>Lorenzo & Maria'S</b><br>cuisine: Continental.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-0.716667,37.15]).addTo(map).bindPopup("<b>Bake Shop</b><br>cuisine:Bakery.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-4.174444,39.460278]).addTo(map).bindPopup("<b>Wendy'S</b><br>cuisine:Hamburgers.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-3.633333,39.85]).addTo(map).bindPopup("<b>Dj Restaurant</b><br>cuisine:Irish.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-1.5,40.033333]).addTo(map).bindPopup("<b>Riviera Caterer</b><br>cuisine:American .</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-2.269444,40.902222]).addTo(map).bindPopup("<b>Tov Kosher Kitchen</b><br>cuisine:Jewish/Kosher.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-3.504722,38.377778]).addTo(map).bindPopup("<b>Brunos On The Boulevard</b><br>cuisine:American .</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-0.456944,39.658333]).addTo(map).bindPopup("<b>Kosher Island</b><br>cuisine:Jewish/Kosher.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([1.75,40.05]).addTo(map).bindPopup("<b>Wilken'S Fine Food</b><br>cuisine:Delicatessen.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([3.916667,41.833333]).addTo(map).bindPopup("<b>Regina Caterers</b><br>cuisine:American .</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});</script>
+		</div>
+		<footer>
+
+		</footer>
+	</body>
+
+</html>
