@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mapping</title>
+		<!-- External Stylesheets -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<link rel="stylesheet" href="Quintin.css" />
+
+	</head>
+
+	<body>
+		<header>
+			<h1>WEB MAPPING</h1>
+			<h2>My First Page</h2>
+		</header>
+		<div id="map" style="width: 705px; height: 375px">
+			<!-- Add the Leaflet JavaScript library -->
+			<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+			<script>
+			var map = L.map('map').setView([0.776913, 37.919447], 6);
+
+			L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=48q75muHRgW2xeDZPOr5', {
+				attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+			}).addTo(map);
+var marker= new
+			L.marker([-0.516667,34.45]).addTo(map).bindPopup("<b>Lorenzo & Maria'S</b><br>cuisine: Continental.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});
+			L.marker([-4.174444,39.460278]).addTo(map).bindPopup("<b>Wendy'S</b><br>cuisine:Hamburgers.</br>").on('mouseover',function(e) {this.openPopup()}).on('mouseout',function(e)
+				{this.closePopup()});</script>
+		</div>
+		<footer>
+			<h1>CONTRIBUTORS; Quintin Odhiambo
+			Enc222-0165/2016</h1>
+			<h2>AUTHORS: OpenStreet</h2>
+
+		</footer>
+	</body>
+
+</html>
